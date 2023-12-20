@@ -1,12 +1,12 @@
+// ignore_for_file: library_private_types_in_public_api, deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:italian_food/views/consts/app_text_style/onboarding_style.dart';
 import 'package:italian_food/views/onboarding/widgets/introduction_widget.dart';
 import 'package:italian_food/views/onboarding/widgets/review_widget.dart';
 
-import '../../../blocs/onboarding_cubit/onboarding_cubit.dart';
 import '../../../util/app_routes.dart';
 import '../../consts/app_colors.dart';
 
@@ -116,7 +116,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     const Spacer(),
                     IconButton(
                       onPressed: () async {
-                        context.read<OnboardingCubit>().setFirstTime();
                         Navigator.pushReplacementNamed(context, AppRoutes.home);
                       },
                       icon: Container(

@@ -12,9 +12,4 @@ class OnboardingCubit extends Cubit<OnboardingState> {
     emit(OnboardingState(isFirstTime));
   }
 
-  Future<void> setFirstTime() async {
-    await onboardingRepository.setFirstTime();
-
-    emit(OnboardingState(false));
-  }
 }
